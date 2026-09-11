@@ -9,8 +9,7 @@ public class DemoApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(DemoApplication.class, args);
-		Hello hello = context.getBean(Hello.class);
-		hello.greet();
+		NotificationService service = context.getBean(NotificationService.class);
+		service.sendMessage();
 	}
-
 }
